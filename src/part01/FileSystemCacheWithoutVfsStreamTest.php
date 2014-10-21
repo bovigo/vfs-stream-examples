@@ -1,7 +1,7 @@
 <?php
 namespace org\bovigo\vfs\examples\part01;
 
-class FileSystemCacheTest extends \PHPUnit_Framework_TestCase
+class FileSystemCacheWithoutVfsStreamTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * ensure that the directory and file are not present from previous run
