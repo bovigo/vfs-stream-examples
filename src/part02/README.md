@@ -15,7 +15,7 @@ Furthermore, we have to explicitly calculate the permissions, and for the
 expected value we have to consider the type (or remove it from the tested
 value).
 
-On a Linux system one must additionally ensure that the umask is considered.
+On a Linux system one must additionally ensure that the [umask](http://en.wikipedia.org/wiki/Umask) is considered.
 This can be done by explicitly setting it as done here, or alternatively by
 calculating the expected value based on the current umask value.
 
