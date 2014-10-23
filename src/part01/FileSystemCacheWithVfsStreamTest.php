@@ -16,7 +16,7 @@ class FileSystemCacheWithVfsStreamTest extends \PHPUnit_Framework_TestCase
     public function createsDirectoryIfNotExists() {
         $cache = new FileSystemCache($this->root->url() . '/cache');
         $cache->store('example', ['bar' => 303]);
-        $this->assertFileExists($this->root->url() . '/cache');
+        $this->assertTrue($this->root->hasChild('cache'));
     }
 
     /**
