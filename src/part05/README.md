@@ -1,4 +1,4 @@
-Part 04: Putting the strength to play: different config files
+Part 05: Putting the strength to play: different config files
 =============================================================
 
 Another great use case for vfsStream is testing behavior with different
