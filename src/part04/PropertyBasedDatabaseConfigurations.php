@@ -1,5 +1,5 @@
 <?php
-namespace org\bovigo\vfs\examples\part05;
+namespace org\bovigo\vfs\examples\part04;
 
 class PropertyBasedDatabaseConfigurations {
     private $configPath;
