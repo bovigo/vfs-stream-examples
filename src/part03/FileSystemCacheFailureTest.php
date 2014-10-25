@@ -21,11 +21,23 @@ class FileSystemCacheFailureTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      * @expectedException  \Exception
+     * @expectedExceptionMessage  failed to open stream
      */
     public function returnsFalseWhenFailureOccurs() {
-        $file  = vfsStream::newFile('example', 0000)
-                          ->withContent('notoverwritten')
-                          ->at($this->root);
+        vfsStream::newFile('example', 0000)
+                 ->withContent('notoverwritten')
+                 ->at($this->root);
+        $cache = new FileSystemCache($this->root->url());
+        $cache->store('example', ['bar' => 303]);
+    }
+
+    /**
+     * @test
+     * @expectedException  Exception
+     * @expectedExceptionMessage  possibly out of free disk space
+     */
+    public function returnsFalseWhenFailureOccursAlternative() {
+        vfsStream::setQuota(10);
         $cache = new FileSystemCache($this->root->url());
         $cache->store('example', ['bar' => 303]);
     }
