@@ -1,7 +1,6 @@
 <?php
 namespace org\bovigo\vfs\examples\part04;
-class PropertyBasedDatabaseConfigurations
-{
+class PropertyBasedDatabaseConfigurations {
     private $configPath;
     private $descriptor;
     private $fallback;
@@ -12,8 +11,7 @@ class PropertyBasedDatabaseConfigurations
      * @param  string  $descriptor  config file name
      * @param  string  $fallback    optional  whether fallback to a default is allowed
      */
-    public function  __construct($configPath, $descriptor = 'rdbms', $fallback = true)
-    {
+    public function  __construct($configPath, $descriptor = 'rdbms', $fallback = true) {
         $this->configPath = $configPath;
         $this->descriptor = $descriptor;
         $this->fallback   = $fallback;
@@ -24,8 +22,7 @@ class PropertyBasedDatabaseConfigurations
      *
      * @return bool
      */
-    private function hasFallback()
-    {
+    private function hasFallback() {
         return ($this->fallback && isset($this->properties()['default']));
     }
 
@@ -35,8 +32,7 @@ class PropertyBasedDatabaseConfigurations
      * @param   string  $id
      * @return  bool
      */
-    public function contain($id)
-    {
+    public function contain($id) {
         if (isset($this->properties()[$id])) {
             return true;
         }
@@ -51,8 +47,7 @@ class PropertyBasedDatabaseConfigurations
      * @return  array
      * @throws  \Exception
      */
-    public function get($id)
-    {
+    public function get($id) {
         if (!isset($this->properties()[$id])) {
             if (!$this->hasFallback()) {
                 throw new \Exception('No database configuration known for database requested with id ' . $id);
@@ -74,12 +69,11 @@ class PropertyBasedDatabaseConfigurations
      * @return  array
      * @throws  \Exception
      */
-    protected function properties()
-    {
+    protected function properties() {
         if (null === $this->dbProperties) {
             $propertiesFile = $this->configPath . '/' . $this->descriptor . '.ini';
             if (!file_exists($propertiesFile) || !is_readable($propertiesFile)) {
-                throw new \Exception($propertiesFile);
+                throw new \Exception('File ' . $propertiesFile . ' not present or readable');
             }
 
             $propertyData = @parse_ini_file($propertiesFile, true);
