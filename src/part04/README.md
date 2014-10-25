@@ -4,8 +4,9 @@ Part 03: Testing for failure
 Until now our class under test gives no feedback on whether storing the data
 was successful. However, file operations may fail for various reasons, and we
 would like that a) our code can handle failure, and b) that clients of our code
-get notified about the failure. To do this, we throw an exception in case
-storing the data fails.
+get notified about the failure. To do this, we introduce a return value which
+signals whether storing the data was successful. Of course, another way could be
+to throw an exception on failure instead of just returning false.
 
 In order to provoke a failure in the test, we put a file with insufficient
 permissions into the place where the new file would be created normally. By

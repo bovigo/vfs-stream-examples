@@ -2,7 +2,7 @@
 namespace org\bovigo\vfs\examples\part03;
 use org\bovigo\vfs\vfsStream;
 
-class FileSystemCacheFailureTest extends \PHPUnit_Framework_TestCase
+class FileSystemCacheWithVfsStreamTest extends \PHPUnit_Framework_TestCase
 {
     private $root;
 
@@ -20,13 +20,17 @@ class FileSystemCacheFailureTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException  \Exception
      */
     public function returnsFalseWhenFailureOccurs() {
         $file  = vfsStream::newFile('example', 0000)
                           ->withContent('notoverwritten')
                           ->at($this->root);
         $cache = new FileSystemCache($this->root->url());
-        $cache->store('example', ['bar' => 303]);
+        $this->assertFalse($cache->store('example', ['bar' => 303]));
+        // next assertion for illustration only
+        $this->assertEquals(
+                'notoverwritten',
+                $file->getContent()
+        );
     }
 }

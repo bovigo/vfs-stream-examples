@@ -17,10 +17,6 @@ class FileSystemCache {
             mkdir($this->dir, $this->permissions, true);
         }
 
-        if (false === @file_put_contents($this->dir . '/' . $key, serialize($data))) {
-            throw new \Exception('Failure while storing ' . $key . ': ' . error_get_last()['message']);
-        }
-
-        return true;
+        return false !== @file_put_contents($this->dir . '/' . $key, serialize($data));
     }
 }
