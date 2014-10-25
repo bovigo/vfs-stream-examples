@@ -17,6 +17,12 @@ class FileSystemCache {
             mkdir($this->dir, $this->permissions, true);
         }
 
-        return false !== @file_put_contents($this->dir . '/' . $key, serialize($data));
+        $storedData = serialize($data);
+        $result = @file_put_contents($this->dir . '/' . $key, serialize($data));
+        if (false === $result) {
+            throw new \Exception('Failure while storing ' . $key . ': ' . error_get_last()['message']);
+        } elseif (strlen($storedData) > $result) {
+            throw new \Exception('Failure while storing ' . $key . ', disc full?');
+        }
     }
 }
