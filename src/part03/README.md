@@ -1,7 +1,7 @@
 Part 03: Testing for failure
 ============================
 
-Until know our class under test gives no feedback on whether storing the data
+Until now our class under test gives no feedback on whether storing the data
 was successful. However, file operations may fail for various reasons, and we
 would like that a) our code can handle failure, and b) that clients of our code
 get notified about the failure. To do this, we introduce a return value which
