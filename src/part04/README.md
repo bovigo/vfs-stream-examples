@@ -12,7 +12,7 @@ on configuration file content.
 With vfsStream we can now have several tests with different configuration file
 contents, without having to create those files for real in the file system.
 There’s also an additional value to that: the configuration used for the test is
-directly inside the test. Anyone reading the test and trying to understand doesn’t
-have to open the different configuration files, but has anything that is special
-in one place. In order to understand the code you only need to have open the
-class under test and the test.
+directly inside the test. Anyone reading the test and trying to understand it
+doesn’t have to open the different configuration files, but has anything that is
+special in one place. In order to understand the code you only need to have open
+the class under test and the test.
