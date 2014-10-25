@@ -1,5 +1,5 @@
 <?php
-namespace org\bovigo\vfs\examples\part04;
+namespace org\bovigo\vfs\examples\part05;
 use org\bovigo\vfs\vfsStream;
 
 class PropertyBasedDatabaseConfigurationsTest extends \PHPUnit_Framework_TestCase {

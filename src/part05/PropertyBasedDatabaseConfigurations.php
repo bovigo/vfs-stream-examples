@@ -1,5 +1,6 @@
 <?php
-namespace org\bovigo\vfs\examples\part04;
+namespace org\bovigo\vfs\examples\part05;
+
 class PropertyBasedDatabaseConfigurations {
     private $configPath;
     private $descriptor;
