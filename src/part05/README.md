@@ -17,3 +17,6 @@ Please note that the content of the large file when read consists of spaces only
 However, if one writes something into it and reads this portion of the file
 afterwards, it will of course contain what was originally written at these
 offsets.
+
+* Previous: [Part 04: Putting the strength to play: different config files](https://github.com/mikey179/vfsStream-examples/tree/master/src/part04)
+* Next: [Part 06: Other setup possibilities](https://github.com/mikey179/vfsStream-examples/tree/master/src/part06)

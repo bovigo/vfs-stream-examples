@@ -16,3 +16,6 @@ happens in memory.
 The tests itself aren't that much different except that we can utilize vfsStream
 functionality to verify the correct result instead of relying on file system
 functions as well.
+
+
+* Next: [Part 02: Permissions](https://github.com/mikey179/vfsStream-examples/tree/master/src/part02)

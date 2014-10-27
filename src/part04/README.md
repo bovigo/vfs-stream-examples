@@ -16,3 +16,6 @@ directly inside the test. Anyone reading the test and trying to understand it
 doesn’t have to open the different configuration files, but has anything that is
 special in one place. In order to understand the code you only need to have open
 the class under test and the test.
+
+* Previous: [Part 03: Testing for failure](https://github.com/mikey179/vfsStream-examples/tree/master/src/part03)
+* Next: [Part 05: Mocking large files](https://github.com/mikey179/vfsStream-examples/tree/master/src/part05)

@@ -23,3 +23,7 @@ Take a look at the vfsStream based test: we don't have to care which exact
 operating system the test is running on, and the intent of the test becomes much
 clearer, as both the expected value is clearly stated, and the tested value has
 a good description of where it comes from.
+
+
+* Previous: [Part 01: Introduction](https://github.com/mikey179/vfsStream-examples/tree/master/src/part01)
+* Next: [Part 03: Testing for failure](https://github.com/mikey179/vfsStream-examples/tree/master/src/part03)

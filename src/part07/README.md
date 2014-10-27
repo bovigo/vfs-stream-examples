@@ -18,3 +18,5 @@ If none of the delivered visitor implementations fit one can create another
 implementation of the vfsStreamVisitor interface, best by extending from
 vfsStreamAbstractVisitor which delivers a default implementation for the
 vfsStreamVisitor::visit() method.
+
+* Previous: [Part 06: Other setup possibilities](https://github.com/mikey179/vfsStream-examples/tree/master/src/part06)
