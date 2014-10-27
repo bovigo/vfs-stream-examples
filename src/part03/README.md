@@ -22,7 +22,9 @@ When using a quota, keep in mind the following rules:
 
 * Only writing through stream functions (i.e. `file_put_contents()`, `fwrite()`, etc.) respects the quota. Writing directly on `vfsStreamFile` instances is not limited.
 * If no quota is set disk space is considered to be unlimited.
-* Each call to `vfsStream::setup()` or `vfsStreamWrapper::register()` will reset the quota to unlimited.
+* Each call to `vfsStream::setup()` will reset the quota to unlimited.
+
+For your production code, think about whether it is required to differentiate between both failures. 
 
 * Previous: [Part 02: Permissions](https://github.com/mikey179/vfsStream-examples/tree/master/src/part02)
 * Next: [Part 04: Putting the strength to play: different config files](https://github.com/mikey179/vfsStream-examples/tree/master/src/part04)
