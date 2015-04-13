@@ -1,7 +1,7 @@
 vfsStream-examples
 ==================
 
-Examples for vfsStream and reasons why you want to use it.
+Examples for [vfsStream](https://github.com/mikey179/vfsStream) and reasons why you want to use it.
 
 * [Part 01: Introduction](https://github.com/mikey179/vfsStream-examples/tree/master/src/part01)
 * [Part 02: Permissions](https://github.com/mikey179/vfsStream-examples/tree/master/src/part02)
