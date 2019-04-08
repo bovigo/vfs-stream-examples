@@ -18,4 +18,4 @@ functionality to verify the correct result instead of relying on file system
 functions as well.
 
 
-* Next: [Part 02: Permissions](https://github.com/mikey179/vfsStream-examples/tree/master/src/part02)
+* Next: [Part 02: Permissions](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part02)

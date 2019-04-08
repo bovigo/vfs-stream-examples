@@ -19,4 +19,4 @@ implementation of the vfsStreamVisitor interface, best by extending from
 vfsStreamAbstractVisitor which delivers a default implementation for the
 vfsStreamVisitor::visit() method.
 
-* Previous: [Part 06: Other setup possibilities](https://github.com/mikey179/vfsStream-examples/tree/master/src/part06)
+* Previous: [Part 06: Other setup possibilities](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part06)

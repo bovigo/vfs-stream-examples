@@ -17,5 +17,5 @@ doesn’t have to open the different configuration files, but has anything that 
 special in one place. In order to understand the code you only need to have open
 the class under test and the test.
 
-* Previous: [Part 03: Testing for failure](https://github.com/mikey179/vfsStream-examples/tree/master/src/part03)
-* Next: [Part 05: Mocking large files](https://github.com/mikey179/vfsStream-examples/tree/master/src/part05)
+* Previous: [Part 03: Testing for failure](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part03)
+* Next: [Part 05: Mocking large files](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part05)

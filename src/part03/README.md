@@ -10,7 +10,7 @@ storing the data fails.
 In order to provoke a failure in the test, we put a file with insufficient
 permissions into the place where the new file would be created normally. By
 default this test using vfsStream will run on every platform as we learned in
-[part 2](https://github.com/mikey179/vfsStream-examples/tree/master/src/part02), and of course we don't need to fiddle with the real filesystem to provoke
+[part 2](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part02), and of course we don't need to fiddle with the real filesystem to provoke
 the error. Testing the failure scenario becomes a piece of cake now.
 
 An alternative way to provoke failure is to pretend that we are out of free disc
@@ -24,7 +24,7 @@ When using a quota, keep in mind the following rules:
 * If no quota is set disk space is considered to be unlimited.
 * Each call to `vfsStream::setup()` will reset the quota to unlimited.
 
-For your production code, think about whether it is required to differentiate between both failures. 
+For your production code, think about whether it is required to differentiate between both failures.
 
-* Previous: [Part 02: Permissions](https://github.com/mikey179/vfsStream-examples/tree/master/src/part02)
-* Next: [Part 04: Putting the strength to play: different config files](https://github.com/mikey179/vfsStream-examples/tree/master/src/part04)
+* Previous: [Part 02: Permissions](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part02)
+* Next: [Part 04: Putting the strength to play: different config files](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part04)

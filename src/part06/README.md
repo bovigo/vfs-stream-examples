@@ -20,5 +20,5 @@ and want to add new tests using vfsStream. Please note that file contents will
 only be copied if they do not exceed the specified `$maxFileSize` parameter
 which needs to be given in bytes. If it is not set it defaults to 1,024 KB.
 
-* Previous: [Part 05: Mocking large files](https://github.com/mikey179/vfsStream-examples/tree/master/src/part05)
-* Next: [Part 07: Structure inspection](https://github.com/mikey179/vfsStream-examples/tree/master/src/part07)
+* Previous: [Part 05: Mocking large files](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part05)
+* Next: [Part 07: Structure inspection](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part07)

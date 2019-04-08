@@ -25,5 +25,5 @@ clearer, as both the expected value is clearly stated, and the tested value has
 a good description of where it comes from.
 
 
-* Previous: [Part 01: Introduction](https://github.com/mikey179/vfsStream-examples/tree/master/src/part01)
-* Next: [Part 03: Testing for failure](https://github.com/mikey179/vfsStream-examples/tree/master/src/part03)
+* Previous: [Part 01: Introduction](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part01)
+* Next: [Part 03: Testing for failure](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part03)
