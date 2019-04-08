@@ -1,6 +1,9 @@
 vfsStream-examples
 ==================
 
+[![Build Status](https://travis-ci.com/bovigo/vfsStream-examples.svg?branch=master)](https://travis-ci.com/bovigo/vfsStream-examples)
+
+
 Examples for [vfsStream](https://github.com/mikey179/vfsStream) and reasons why you want to use it.
 
 * [Part 01: Introduction](https://github.com/bovigo/vfs-stream-examples/tree/master/src/part01)
