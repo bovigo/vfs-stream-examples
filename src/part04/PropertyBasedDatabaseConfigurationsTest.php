@@ -1,15 +1,16 @@
 <?php
 namespace org\bovigo\vfs\examples\part04;
 use org\bovigo\vfs\vfsStream;
+use PHPUnit\Framework\TestCase;
 
-class PropertyBasedDatabaseConfigurationsTest extends \PHPUnit_Framework_TestCase {
+class PropertyBasedDatabaseConfigurationsTest extends TestCase {
     private $propertyBasedConfigurations;
     private $configFile;
 
     /**
      * set up test environment
      */
-    public function setUp() {
+    public function setUp(): void {
         $this->propertyBasedConfigurations = new PropertyBasedDatabaseConfigurations($this->createConfig());
     }
 
@@ -66,12 +67,12 @@ dsn="mysql:host=localhost;dbname=example"');
 
     /**
      * @test
-     * @expectedException  Exception
-     * @expectedExceptionMessage  Missing dsn property in database configuration with id foo
      */
     public function throwsExceptionWhenDsnPropertyMissing() {
         $this->configFile->setContent('[foo]
 username="root"');
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Missing dsn property in database configuration with id foo");
         $this->propertyBasedConfigurations->get('foo');
     }
 
@@ -101,24 +102,24 @@ dsn="mysql:host=localhost;dbname=example"');
 
     /**
      * @test
-     * @expectedException  Exception
-     * @expectedExceptionMessage  No database configuration known for database requested with id foo
      */
     public function throwsExceptionWhenNotPresentInFileAndNoDefaultAndFallbackEnabled() {
         $this->configFile->setContent('[bar]
 dsn="mysql:host=localhost;dbname=example"');
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("No database configuration known for database requested with id foo");
         $this->propertyBasedConfigurations->get('foo');
     }
 
     /**
      * @test
-     * @expectedException  Exception
-     * @expectedExceptionMessage  No database configuration known for database requested with id foo
      */
     public function throwsExceptionWhenNotPresentInFileAndFallbackDisabled() {
         $propertyBasedConfigurations = new PropertyBasedDatabaseConfigurations($this->createConfig() ,'rdbms', false);
         $this->configFile->setContent('[default]
 dsn="mysql:host=localhost;dbname=example"');
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("No database configuration known for database requested with id foo");
         $propertyBasedConfigurations->get('foo');
     }
 

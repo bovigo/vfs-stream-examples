@@ -1,7 +1,8 @@
 <?php
 namespace org\bovigo\vfs\examples\part01;
+use PHPUnit\Framework\TestCase;
 
-class FileSystemCacheWithoutVfsStreamTest extends \PHPUnit_Framework_TestCase
+class FileSystemCacheWithoutVfsStreamTest extends TestCase
 {
     /**
      * ensure that the directory and file are not present from previous run
@@ -16,11 +17,11 @@ class FileSystemCacheWithoutVfsStreamTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    public function setUp() {
+    public function setUp(): void {
         $this->clean();
     }
 
-    public function tearDown() {
+    public function tearDown(): void {
         $this->clean();
     }
 

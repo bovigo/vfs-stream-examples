@@ -5,11 +5,11 @@
     "license": "BSD-3-Clause",
     "description": "Examples for usage of vfsStream",
     "require": {
-        "php": ">=5.4.0"
+        "php": "^7.2"
     },
     "require-dev": {
-        "mikey179/vfsStream": "~1.4",
-        "phpunit/phpunit": "~4.2"
+        "mikey179/vfsStream": "^1.6",
+        "phpunit/phpunit": "^8.1"
     },
     "autoload": {
         "psr-4": {

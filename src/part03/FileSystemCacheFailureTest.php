@@ -1,12 +1,13 @@
 <?php
 namespace org\bovigo\vfs\examples\part03;
 use org\bovigo\vfs\vfsStream;
+use PHPUnit\Framework\TestCase;
 
-class FileSystemCacheFailureTest extends \PHPUnit_Framework_TestCase
+class FileSystemCacheFailureTest extends TestCase
 {
     private $root;
 
-    public function setUp() {
+    public function setUp(): void {
         $this->root = vfsStream::setup();
     }
 
@@ -20,25 +21,25 @@ class FileSystemCacheFailureTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException  \Exception
-     * @expectedExceptionMessage  failed to open stream
      */
     public function returnsFalseWhenFailureOccurs() {
         vfsStream::newFile('example', 0000)
                  ->withContent('notoverwritten')
                  ->at($this->root);
         $cache = new FileSystemCache($this->root->url());
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("failed to open stream");
         $cache->store('example', ['bar' => 303]);
     }
 
     /**
      * @test
-     * @expectedException  Exception
-     * @expectedExceptionMessage  possibly out of free disk space
      */
     public function returnsFalseWhenFailureOccursAlternative() {
         vfsStream::setQuota(10);
         $cache = new FileSystemCache($this->root->url());
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("possibly out of free disk space");
         $cache->store('example', ['bar' => 303]);
     }
 }

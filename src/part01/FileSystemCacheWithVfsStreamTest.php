@@ -1,12 +1,13 @@
 <?php
 namespace org\bovigo\vfs\examples\part01;
 use org\bovigo\vfs\vfsStream;
+use PHPUnit\Framework\TestCase;
 
-class FileSystemCacheWithVfsStreamTest extends \PHPUnit_Framework_TestCase
+class FileSystemCacheWithVfsStreamTest extends TestCase
 {
     private $root;
 
-    public function setUp() {
+    public function setUp(): void {
         $this->root = vfsStream::setup();
     }
 
